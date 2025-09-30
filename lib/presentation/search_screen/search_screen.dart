@@ -396,7 +396,7 @@ class _SearchScreenState extends State<SearchScreen> {
           _isRecording = true;
         });
 
-        await _audioRecorder.start(const RecordConfig(),
+        await _audioRecorder.start(RecordConfig(),
             path: 'voice_search.m4a');
 
         // Simulate voice recognition after 3 seconds

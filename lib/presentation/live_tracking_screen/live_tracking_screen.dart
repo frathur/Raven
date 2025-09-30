@@ -262,13 +262,13 @@ class _LiveTrackingScreenState extends State<LiveTrackingScreen>
   void _createMarkers() {
     _markers = {
       Marker(
-        markerId: const MarkerId('user'),
+        markerId: MarkerId('user'),
         position: _userLocation,
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-        infoWindow: const InfoWindow(title: 'Your Location'),
+        infoWindow: InfoWindow(title: 'Your Location'),
       ),
       Marker(
-        markerId: const MarkerId('restaurant'),
+        markerId: MarkerId('restaurant'),
         position: _restaurantLocation,
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
         infoWindow: InfoWindow(
@@ -277,7 +277,7 @@ class _LiveTrackingScreenState extends State<LiveTrackingScreen>
         ),
       ),
       Marker(
-        markerId: const MarkerId('drone'),
+        markerId: MarkerId('drone'),
         position: _droneLocation,
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow),
         rotation: _droneRotation,
@@ -292,7 +292,7 @@ class _LiveTrackingScreenState extends State<LiveTrackingScreen>
   void _createRoute() {
     _polylines = {
       Polyline(
-        polylineId: const PolylineId('route'),
+        polylineId: PolylineId('route'),
         points: [_restaurantLocation, _droneLocation, _userLocation],
         color: AppTheme.accentYellow,
         width: 3,
@@ -657,3 +657,4 @@ class _LiveTrackingScreenState extends State<LiveTrackingScreen>
     );
   }
 }
+

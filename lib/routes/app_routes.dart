@@ -17,7 +17,7 @@ class AppRoutes {
   static const String restaurantDetail = '/restaurant-detail-screen';
 
   static Map<String, WidgetBuilder> routes = {
-    initial: (context) => const LiveTrackingScreen(),
+    initial: (context) => const HomeScreen(),
     liveTracking: (context) => const LiveTrackingScreen(),
     shoppingCart: (context) => const ShoppingCartScreen(),
     search: (context) => const SearchScreen(),
